@@ -1,17 +1,22 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
+import Menu from './components/Menu/Menu';
 
-import WelcomePage from './pages/welcomePage';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './assets/scss/_paper-dashboard.scss';
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Route path="/" exact component={WelcomePage} />
+class App extends React.Component {
+  render() {
+     return (
+      <div className="wrapper">
+        <Menu></Menu>
+        <div className="main-panel">
+          <div className="content">
+          </div>
+        </div>
       </div>
-    </Router>
-  );
+     );
+  }
 }
 
 export default App;
